@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+{% if user.is_authenticated %}
+    <div class="m-3 p-3">
+        <h1 class="text-center">Welcome to {{user.first_name}} {{user.last_name}}</h1>
+        <a class="btn btn-danger d-block mx-auto col-sm-11 col-md-6 col-lg-2" href={% url "resetpassword" %}>Change Your Password</a>
+    </div>
+
+{% endif %}
+{% endblock content %}
