@@ -28,7 +28,7 @@ The French inventor Nicolas-Joseph Cugnot built the first steam-powered road veh
                   <img src="{% static car.image %}" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">{{car.title}}</h5>
-                    <p class="card-text">{{car.description}}</p>
+                    <p class="card-text">{{car.description|truncatewords:15}}</p>
                     <p><small>Posted On:- {{car.date}}</small>
                   </div>
                 <div class="d-flex justify-content-between m-2">

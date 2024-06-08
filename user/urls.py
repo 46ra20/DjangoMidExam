@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import UserRegistration,UserLogin,UserLogout,UserProfile,ResetYourPassword
+from .views import UserRegistration,UserLogin,UserLogout,UserProfile,ResetYourPassword,UpdateUserData
 
 urlpatterns = [
     path('registration/',UserRegistration,name='useregistration'),
@@ -7,4 +7,5 @@ urlpatterns = [
     path('logout/',UserLogout,name='logout'),
     path('userprofile/',UserProfile,name='profile'),
     path('resetpassword/',ResetYourPassword.as_view(),name='resetpassword'),
+    path('updateuser/',UpdateUserData,name='updateuser'),
 ]
